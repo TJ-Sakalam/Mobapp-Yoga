@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".FoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SecondActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+        <activity
             android:name=".Splashscreenok"
             android:exported="false" />
         <activity android:name=".MainActivity" />
