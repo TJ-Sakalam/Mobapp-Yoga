@@ -20,7 +20,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_second_activity);
+        setContentView(R.layout.activity_second);
 
         // Fix: use correct Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -46,6 +46,7 @@ public class SecondActivity extends AppCompatActivity {
                 int value = i + 1;
                 Log.i("FIRST", "Pose clicked: " + value);
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                intent.putExtra("value", value);
                 intent.putExtra("pose_id", value); // Optional: pass data
                 startActivity(intent);
                 break;

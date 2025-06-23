@@ -14,7 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class ThirdActivity extends AppCompatActivity {
+public class ThirdActivity2 extends AppCompatActivity {
 
     int intvalue;
     Button startBtn;
@@ -28,7 +28,7 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_third);
+        setContentView(R.layout.activity_third2);
 
         // Get intent extra
         Intent intent = getIntent();
@@ -37,49 +37,49 @@ public class ThirdActivity extends AppCompatActivity {
         // Load appropriate layout
         switch (intvalue) {
             case 1:
-                setContentView(R.layout.activity_bow);
+                setContentView(R.layout.activity_bow2);
                 break;
             case 2:
-                setContentView(R.layout.activity_bridge);
+                setContentView(R.layout.activity_bridge2);
                 break;
             case 3:
-                setContentView(R.layout.activity_chair);
+                setContentView(R.layout.activity_chair2);
                 break;
             case 4:
-                setContentView(R.layout.activity_child);
+                setContentView(R.layout.activity_child2);
                 break;
             case 5:
-                setContentView(R.layout.activity_cobbler);
+                setContentView(R.layout.activity_cobbler2);
                 break;
             case 6:
-                setContentView(R.layout.activity_cow);
+                setContentView(R.layout.activity_cow2);
                 break;
             case 7:
-                setContentView(R.layout.activity_playji);
+                setContentView(R.layout.activity_playji2);
                 break;
             case 8:
-                setContentView(R.layout.activity_pauseji);
+                setContentView(R.layout.activity_pauseji2);
                 break;
             case 9:
-                setContentView(R.layout.activity_plankji);
+                setContentView(R.layout.activity_plankji2);
                 break;
             case 10:
-                setContentView(R.layout.activity_crunches);
+                setContentView(R.layout.activity_crunches2);
                 break;
             case 11:
-                setContentView(R.layout.activity_situp);
+                setContentView(R.layout.activity_situp2);
                 break;
             case 12:
-                setContentView(R.layout.activity_russia);
+                setContentView(R.layout.activity_russia2);
                 break;
             case 13:
-                setContentView(R.layout.activity_rotation);
+                setContentView(R.layout.activity_rotation2);
                 break;
             case 14:
-                setContentView(R.layout.activity_twist);
+                setContentView(R.layout.activity_twist2);
                 break;
             default:
-                setContentView(R.layout.activity_third); // fallback
+                setContentView(R.layout.activity_third2); // fallback
                 break;
         }
 
@@ -135,13 +135,13 @@ public class ThirdActivity extends AppCompatActivity {
             public void onFinish() {
                 int newValue = intvalue + 1;
                 if (newValue <= 14) {
-                    Intent intent = new Intent(ThirdActivity.this, ThirdActivity.class);
+                    Intent intent = new Intent(ThirdActivity2.this, ThirdActivity2.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("value", newValue);
                     startActivity(intent);
                 } else {
                     newValue = 1;
-                    Intent intent = new Intent(ThirdActivity.this, ThirdActivity.class);
+                    Intent intent = new Intent(ThirdActivity2.this, ThirdActivity2.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("value", newValue);
                     startActivity(intent);
