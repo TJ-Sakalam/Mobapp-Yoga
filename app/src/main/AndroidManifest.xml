@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".FoodActivityDeatils"
+            android:exported="false" />
+        <activity
             android:name=".ThirdActivity2"
             android:exported="false" />
         <activity
