@@ -20,28 +20,25 @@
         app:titleTextColor="#FFF"
         android:gravity="end"/>
 
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:scrollbars="none">
 
-
         <LinearLayout
             android:layout_marginTop="10dp"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
+            <!-- Before Age 18 Section -->
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10.0dp"
                 android:layout_marginTop="15.0dp"
                 android:background="@drawable/backgroundcrop"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:onClick="beforeage18"
@@ -49,18 +46,13 @@
                     android:layout_height="150.0dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
-
-
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.0"
                         android:orientation="vertical">
-
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -70,17 +62,44 @@
                             android:padding="5.0dp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
-                            android:textStyle="bold"
-                            />
+                            android:textStyle="bold"/>
 
-                        <TextView
+                        <!-- Day Counter Layout -->
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="serif"
-                            android:padding="5.0dp"
-                            android:text="Days 60"
-                            android:textSize="20.0dp"
-                            />
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Days "
+                                android:textSize="20.0dp"/>
+
+                            <ImageView
+                                android:id="@+id/btnDecreaseBefore"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/outline_arrow_drop_down_24"
+                                android:clickable="true"/>
+
+                            <TextView
+                                android:id="@+id/tvDaysBefore"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textSize="20.0dp"/>
+
+                            <ImageView
+                                android:id="@+id/btnIncreaseBefore"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/outline_arrow_drop_up_24"
+                                android:clickable="true"/>
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -88,41 +107,31 @@
                             android:padding="5.0dp"
                             android:text="Every Day 15 min"
                             android:textColor="#ffff5722"
-                            android:textStyle="bold"
-                            />
-
+                            android:textStyle="bold"/>
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2.0"
-                        >
+                        android:layout_weight="2.0">
 
                         <pl.droidsonroids.gif.GifImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:src="@drawable/exersice_7"/>
-
-
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.0"
-                        >
+                        android:layout_weight="0.0">
 
                         <ImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:padding="10.0dp"
-                            android:src="@drawable/baseline_keyboard_arrow_right_24"
-                            />
-
+                            android:src="@drawable/baseline_keyboard_arrow_right_24"/>
                     </LinearLayout>
-
                 </LinearLayout>
 
                 <Button
@@ -134,21 +143,16 @@
                     android:text="Get Started"
                     android:textAllCaps="true"
                     android:textColor="#FFF"/>
-
-
-
-
-
-
             </LinearLayout>
+
+            <!-- After Age 18 Section -->
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10.0dp"
                 android:layout_marginTop="15.0dp"
                 android:background="@drawable/backgroundcrop"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:onClick="afterage18"
@@ -156,18 +160,13 @@
                     android:layout_height="150.0dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
-
-
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.0"
                         android:orientation="vertical">
-
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -177,17 +176,44 @@
                             android:padding="5.0dp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
-                            android:textStyle="bold"
-                            />
+                            android:textStyle="bold"/>
 
-                        <TextView
+                        <!-- Day Counter Layout -->
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="serif"
-                            android:padding="5.0dp"
-                            android:text="Days 60"
-                            android:textSize="20.0dp"
-                            />
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Days "
+                                android:textSize="20.0dp"/>
+
+                            <ImageView
+                                android:id="@+id/btnDecreaseAfter"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/outline_arrow_drop_down_24"
+                                android:clickable="true"/>
+
+                            <TextView
+                                android:id="@+id/tvDaysAfter"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textSize="20.0dp"/>
+
+                            <ImageView
+                                android:id="@+id/btnIncreaseAfter"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/outline_arrow_drop_up_24"
+                                android:clickable="true"/>
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -195,41 +221,31 @@
                             android:padding="5.0dp"
                             android:text="Every Day 15 min"
                             android:textColor="#ffff5722"
-                            android:textStyle="bold"
-                            />
-
+                            android:textStyle="bold"/>
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2.0"
-                        >
+                        android:layout_weight="2.0">
 
                         <pl.droidsonroids.gif.GifImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:src="@drawable/exersice_1"/>
-
-
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.0"
-                        >
+                        android:layout_weight="0.0">
 
                         <ImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:padding="10.0dp"
-                            android:src="@drawable/baseline_keyboard_arrow_right_24"
-                            />
-
+                            android:src="@drawable/baseline_keyboard_arrow_right_24"/>
                     </LinearLayout>
-
                 </LinearLayout>
 
                 <Button
@@ -241,14 +257,9 @@
                     android:text="Get Started"
                     android:textAllCaps="true"
                     android:textColor="#FFF"/>
-
-
-
-
-
-
             </LinearLayout>
 
+            <!-- Nutrition Section -->
             <LinearLayout
                 android:onClick="food"
                 android:layout_width="fill_parent"
@@ -258,74 +269,60 @@
                 android:background="@drawable/backgroundcrop"
                 android:orientation="vertical">
 
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="150.0dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:orientation="vertical">
+                    android:layout_height="150.0dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="monospace"
-                        android:padding="5.0dp"
-                        android:text="Nutrition or tips"
-                        android:textColor="#ff000000"
-                        android:textSize="20.0dp"
-                        android:textStyle="bold"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5.dp"
-                        android:text="Suggestion for free"
-                        android:textStyle="bold"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2.0">
-
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/food"
-                        />
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:padding="5.0dp"
+                            android:text="Nutrition or tips"
+                            android:textColor="#ff000000"
+                            android:textSize="20.0dp"
+                            android:textStyle="bold"/>
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5.dp"
+                            android:text="Suggestion for free"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.0">
-
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10.0dp"
-                        android:src="@drawable/baseline_keyboard_arrow_right_24"
-                        />
+                        android:layout_weight="2.0">
 
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/food"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10.0dp"
+                            android:src="@drawable/baseline_keyboard_arrow_right_24"/>
+                    </LinearLayout>
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-
             </LinearLayout>
 
             <LinearLayout
@@ -333,18 +330,11 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
                 <FrameLayout
                     android:id="@+id/fl_Adplaceholder"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </LinearLayout>
-
-
     </ScrollView>
-
 </LinearLayout>
