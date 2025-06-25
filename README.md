@@ -1,10 +1,10 @@
 # Project Team
 
 ## 🧑‍💻 Researcher/Developer Team
--TJ G. Oliquino
--Anton Vinuya
--Aguinaldo
--Zenki
+-TJ G. Oliquino<br>
+-Anton Vinuya<br>
+-Aguinaldo<br>
+-Zenki<br>
 
 ## 👨‍🏫 Adviser
 - Jefferson A. Costales  
@@ -16,7 +16,7 @@ College of Arts and Sciences
 ITE Department  
 
 ## 📚 Academic Program
-- Bachelor of Science in Computer Science  
+- Bachelor of Information Technology
 
 ## 📅 Date
 - January 17, 2022
