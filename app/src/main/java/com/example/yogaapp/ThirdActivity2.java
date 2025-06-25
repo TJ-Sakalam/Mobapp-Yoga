@@ -3,13 +3,18 @@ package com.example.yogaapp;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +30,7 @@ public class ThirdActivity2 extends AppCompatActivity {
     TextView mtextview;
     private boolean MTimeRunning;
     private long MTimeLeftInMillis;
+    private MediaPlayer mediaPlayer;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -135,19 +141,42 @@ public class ThirdActivity2 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                int newValue = intvalue + 1;
-                if (newValue <= 14) {
-                    Intent intent = new Intent(ThirdActivity2.this, ThirdActivity2.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    intent.putExtra("value", newValue);
-                    startActivity(intent);
-                } else {
-                    newValue = 1;
-                    Intent intent = new Intent(ThirdActivity2.this, ThirdActivity2.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    intent.putExtra("value", newValue);
-                    startActivity(intent);
+                MTimeRunning = false;
+                startBtn.setText("START");
+                mtextview.setText("00:00");
+
+                // Play completion sound for exactly 5 seconds
+                try {
+                    mediaPlayer = MediaPlayer.create(ThirdActivity2.this, R.raw.completion_sound);
+                    mediaPlayer.start();
+
+                    // Stop after exactly 5 seconds (5000 milliseconds)
+                    new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+                            mediaPlayer.stop();
+                            mediaPlayer.release();
+                            mediaPlayer = null;
+                        }
+                    }, 10000);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+
+                // Vibrate on completion
+                try {
+                    Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                    if (vibrator != null && vibrator.hasVibrator()) {
+                        vibrator.vibrate(500); // 500ms vibration
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                // Show completion message
+                Toast.makeText(ThirdActivity2.this,
+                        "Exercise completed!",
+                        Toast.LENGTH_SHORT).show();
             }
         }.start();
 
@@ -200,7 +229,30 @@ public class ThirdActivity2 extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        if (mediaPlayer != null) {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop();
+            }
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
     public void onBackPressed() {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
         super.onBackPressed();
     }
 }

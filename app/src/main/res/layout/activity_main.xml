@@ -16,7 +16,7 @@
         android:background="@color/colorPrimaryDark"
         android:textAlignment="textEnd"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Yoga App"
+        app:title="Yoga Fitness"
         app:titleTextColor="#FFF"
         android:gravity="end"/>
 
