@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.yogaapp"
-        minSdk = 35
-        targetSdk = 35
+        minSdk = 21  // Changed from 35 to support your Infinix X695 (API 30)
+        targetSdk = 35  // Keep target as 35 for latest features
         versionCode = 1
         versionName = "1.0"
 

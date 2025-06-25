@@ -1,11 +1,14 @@
 package com.example.yogaapp;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -79,22 +82,30 @@ public class ThirdActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_twist);
                 break;
             default:
-                setContentView(R.layout.activity_third); // fallback
+                setContentView(R.layout.activity_third);
                 break;
         }
 
-        // Find views AFTER layout is set
         startBtn = findViewById(R.id.startbutton);
         mtextview = findViewById(R.id.time);
 
-        startBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (MTimeRunning) {
-                    stopTimer();
-                } else {
-                    startTimer();
-                }
+        // Default time (if needed)
+        MTimeLeftInMillis = 60000; // 1 minute default
+        updateTimer();
+
+        // Start/Pause Timer
+        startBtn.setOnClickListener(v -> {
+            if (MTimeRunning) {
+                stopTimer();
+            } else {
+                startTimer();
+            }
+        });
+
+        // Open time picker dialog when time is clicked
+        mtextview.setOnClickListener(v -> {
+            if (!MTimeRunning) {
+                showTimePickerDialog();
             }
         });
 
@@ -115,15 +126,6 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
     private void startTimer() {
-        String time = mtextview.getText().toString();
-        String minStr = time.substring(0, 2);
-        String secStr = time.substring(3, 5);
-
-        int minutes = Integer.valueOf(minStr);
-        int seconds = Integer.valueOf(secStr);
-        int totalSeconds = minutes * 60 + seconds;
-        MTimeLeftInMillis = totalSeconds * 1000;
-
         countDownTimer = new CountDownTimer(MTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -164,6 +166,37 @@ public class ThirdActivity extends AppCompatActivity {
         timeLeftText += seconds;
 
         mtextview.setText(timeLeftText);
+    }
+
+    private void showTimePickerDialog() {
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_timer_picker, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+
+        NumberPicker minPicker = dialogView.findViewById(R.id.minPicker);
+        NumberPicker secPicker = dialogView.findViewById(R.id.secPicker);
+        Button setTimeButton = dialogView.findViewById(R.id.setTimeButton);
+
+        minPicker.setMinValue(0);
+        minPicker.setMaxValue(59);
+        secPicker.setMinValue(0);
+        secPicker.setMaxValue(59);
+
+        // Set current time as default
+        String[] timeParts = mtextview.getText().toString().split(":");
+        minPicker.setValue(Integer.parseInt(timeParts[0]));
+        secPicker.setValue(Integer.parseInt(timeParts[1]));
+
+        setTimeButton.setOnClickListener(v -> {
+            int minutes = minPicker.getValue();
+            int seconds = secPicker.getValue();
+            MTimeLeftInMillis = (minutes * 60 + seconds) * 1000;
+            updateTimer();
+            dialog.dismiss();
+        });
+
+        dialog.show();
     }
 
     @Override
