@@ -33,8 +33,8 @@ https://drive.google.com/file/d/1y96zXO7JztSdnP6XqjV5wjGMR3YJ23Vi/view?usp=drive
 ## 🧑‍💻 Researcher/Developer Team
 -TJ G. Oliquino<br>
 -Anton Vinuya<br>
--John einreb Aguinaldo<br>
--Zenki<br>
+-John Einreb Aguinaldo<br>
+-Dela Cruz King Jowill<br>
 
 ## 👨‍🏫 Adviser
 - Jefferson A. Costales  
