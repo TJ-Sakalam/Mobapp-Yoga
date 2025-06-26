@@ -1,17 +1,28 @@
 <h1>Yoga Fittness</h1>
 
 ![496624777_1891519438306478_219796522933531622_n](https://github.com/user-attachments/assets/960fb9f9-f7e3-4a26-819f-949825d2be40)
-![496628108_4068797716672263_7620430888711600864_n](https://github.com/user-attachments/assets/933fbe55-084d-4c65-ad0a-47ea8d153ac8)
-![496627449_1446002426710640_4031419217582300392_n](https://github.com/user-attachments/assets/9e05d4e9-9220-49af-851e-e93174d13a93)
-![504516561_2460935567618906_5659171137131632147_n](https://github.com/user-attachments/assets/5b922c81-018b-42a9-9d9a-894a092a986e)
 
 <h1>Overview</h1>
 Yoga fitness is a holistic form of exercise that combines physical postures, breathing techniques, and mindfulness to improve overall health and well-being. It focuses on enhancing flexibility, strength, balance, and mental clarity. Unlike high-intensity workouts, yoga promotes low-impact movements that engage both the body and mind.
 
+![496627449_1446002426710640_4031419217582300392_n](https://github.com/user-attachments/assets/c41d6321-38b7-44f4-9314-cdc9375cb859)
 
+<h1>Features</h1>
 
+<h2>1.WorkOut Selection</h2>
+
+![496628108_4068797716672263_7620430888711600864_n](https://github.com/user-attachments/assets/7390dd45-8c62-4e18-80e6-67bc7dcfd9ee)
+
+<h2>2.Workout timer and Instructions</h2>
+
+![496624400_2126863504456962_5302951288537849598_n](https://github.com/user-attachments/assets/dacf0b71-f611-43e7-a53d-3c5897864cfa)
+
+<h2>3.Tips & Diet</h2>
+
+![504516561_2460935567618906_5659171137131632147_n](https://github.com/user-attachments/assets/a1c7bd62-ff61-42bb-869d-597494a8b30c)
 
 # Project Team
+
 
 ## 🧑‍💻 Researcher/Developer Team
 -TJ G. Oliquino<br>
