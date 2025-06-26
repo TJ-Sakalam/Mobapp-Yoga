@@ -21,13 +21,19 @@ Yoga fitness is a holistic form of exercise that combines physical postures, bre
 
 ![504516561_2460935567618906_5659171137131632147_n](https://github.com/user-attachments/assets/a1c7bd62-ff61-42bb-869d-597494a8b30c)
 
-# Project Team
+# Requirements 
+-Android Studio 4.0 (installed on a Mac, Linux, or Windows machine)<br>
+-Android device in developer mode with USB debugging enabled<br>
+-USB cable (to connect Android device to your computer)<br>
 
+# Demo Video
+
+https://drive.google.com/file/d/1y96zXO7JztSdnP6XqjV5wjGMR3YJ23Vi/view?usp=drive_link
 
 ## 🧑‍💻 Researcher/Developer Team
 -TJ G. Oliquino<br>
 -Anton Vinuya<br>
--Aguinaldo<br>
+-John einreb Aguinaldo<br>
 -Zenki<br>
 
 ## 👨‍🏫 Adviser
