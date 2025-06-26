@@ -6,7 +6,7 @@
 ![504516561_2460935567618906_5659171137131632147_n](https://github.com/user-attachments/assets/5b922c81-018b-42a9-9d9a-894a092a986e)
 
 <h1>Overview</h1>
-
+Yoga fitness is a holistic form of exercise that combines physical postures, breathing techniques, and mindfulness to improve overall health and well-being. It focuses on enhancing flexibility, strength, balance, and mental clarity. Unlike high-intensity workouts, yoga promotes low-impact movements that engage both the body and mind.
 
 
 
