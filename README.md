@@ -42,8 +42,7 @@ https://drive.google.com/file/d/1y96zXO7JztSdnP6XqjV5wjGMR3YJ23Vi/view?usp=drive
 ## 🏫 Institution
 **Eulogio "Amang" Rodriguez Institute of Science and Technology**  
 Nagtahan, Sampa.loc, Manila, Philippines  
-College of Arts and Sciences  
-ITE Department  
+College of Computing Studies 
 
 ## 📚 Academic Program
 - Bachelor of Information Technology
